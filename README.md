@@ -1,59 +1,111 @@
-# ConceitosBasicos
+# Criar projeto angular do zero e integrar com github
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+## 1. **Pré-requisitos**
 
-## Development server
+Certifique-se de ter instalado:
 
-To start a local development server, run:
+- **Node.js**: https://nodejs.org/
+- **Angular CLI**: npm install -g @angular/cli     
+- **Git**: https://git-scm.com/
 
-```bash
-ng serve
-```
+## 2. **Criar projeto Angular**
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abra o terminal/prompt e execute:
+- ng new nome-do-projeto
 
-## Code scaffolding
+Exemplo:
+- ng new projeto-angular-git
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+> Durante a criação, ele vai perguntar:
+> 
+> - Se deseja adicionar o Angular Routing? (Sim ou não)
+> - Qual tipo de folha de estilo usar (CSS, SCSS, etc.)
 
-```bash
-ng generate component component-name
-```
+## 3. Acessar a pasta do projeto
+- cd projeto-angular-git
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 4. Inicializar Git no projeto
+- git init
 
-```bash
-ng generate --help
-```
+## 5. Criar um `.gitignore`
 
-## Building
+Se você criou o projeto com o Angular CLI, ele já vem com `.gitignore`.
 
-To build the project run:
+Mas verifique se o conteúdo inclui:
+/node_modules
+/dist
+.env
 
-```bash
-ng build
-```
+## 6. Fazer primeiro commit
+- git add .
+- git commit -m "Primeiro commit: projeto Angular criado"
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 7. Criar repositório remoto no GitHub
 
-## Running unit tests
+Acesse: https://github.com/new
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Nome do repositório: `projeto-angular-git`
+- **Não** marque para adicionar README, .gitignore ou license (já temos localmente)
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 🔗 8. Conectar ao repositório remoto
+Copie a URL do repositório, por exemplo:
+- git remote add origin https://github.com/usuario/projeto-angular-git.git
 
-For end-to-end (e2e) testing, run:
+## 9. Enviar projeto para o GitHub
+- git branch -M main
+- git push -u origin main
 
-```bash
-ng e2e
-```
+## 10. Para verificar se foi para o repositório do git só acessar no navegador
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Acesse: `https://github.com/usuario/projeto-angular-git`
 
-## Additional Resources
+Você verá o projeto enviado com o histórico do commit.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 11. Para rodar o projeto e ver no navegador
+Digite o comando:
+- ng serve
+E acesse: http://localhost:4200
+
+
+**Clonar projeto do GitHub e executar localmente**
+## 1. Clone o repositório
+- git clone https://github.com/seu-usuario/projeto-angular-git.git
+- cd projeto-angular-git
+
+## 2. Instale as dependências
+- npm install
+
+## 3. Rode o servidor de desenvolvimento
+- ng serve
+
+E pronto pode acessar sua pagina no navegador pelo endereço: http://localhost:4200
+
+**Caso tenha feito alterações no projeto e deseja subi-las para o repositório remoto ou github**
+Perfeito! Para subir suas alterações no projeto Angular para o repositório remoto (GitHub), 
+siga este passo a passo no terminal, dentro da pasta do projeto:
+
+## 1. Verifique os arquivos modificados(opcional):
+- git status
+Isso vai mostrar os arquivos que foram alterados, adicionados ou deletados.
+
+## 2. Adicionae as alterações para commit:
+- git add .
+Isso adiciona todos os arquivos modificados.
+Se quiser adicionar arquivos específicos, use: git add nome-do-arquivo.
+
+## 3. Crie um commit com uma mensagem:
+- git commit -m "Descreva aqui o que foi alterado"
+Exemplo: 
+- git commit -m "Adicionado componente de login"
+
+## 4. Envie para o repositório remoto:
+- git push origin main
+
+Use main se sua branch principal se chama main.
+Caso seja master, use:
+- git push origin master
+
+
+
