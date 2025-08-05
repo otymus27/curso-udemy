@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { helloWorld } from './components/primeiro-componente/primeiro-componente';
-import { Calculadora } from "./components/calculadora/calculadora";
+import { HelloWorldComponent } from './helloworld/helloworld.compont';
+import { Minhapagina } from './minhapagina/minhapagina';
 
 @Component({
   selector: 'app-root',
-  imports: [helloWorld, Calculadora],
+  imports: [HelloWorldComponent, Minhapagina],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
